@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/place/:userId',authenticateUser, placeOrder);
 router.get('/history/:userId',authenticateUser, getOrderHistory);
-router.get('/:id',authenticateUser, getOrderById);
+router.get('/:id/:userId',authenticateUser, getOrderById);
 router.post('/cancel/:userId',authenticateUser, cancelOrder);
 
 export default router;
